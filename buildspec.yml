@@ -20,6 +20,5 @@ phases:
       - docker push 321469083854.dkr.ecr.us-east-1.amazonaws.com/flask_image:latest
       - echo Flask image pushed to ECR
       - printf '[{"name":"'$ecs_container_name'","imageUri":"'$ecs_uri'"}]' $REPOSITORY_URI:$IMAGE_TAG > imagedefinitions.json
-
 artifacts:
     files: imagedefinitions.json
