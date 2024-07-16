@@ -19,3 +19,4 @@ phases:
       - docker tag flask_image:latest 321469083854.dkr.ecr.us-east-1.amazonaws.com/flask_image:latest
       - docker push 321469083854.dkr.ecr.us-east-1.amazonaws.com/flask_image:latest
       - echo Flask image pushed to ECR
+      - aws ecs update-service --force-new-deployment --service flask_service --cluster postnl-poc-cluster1
