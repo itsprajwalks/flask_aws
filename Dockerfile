@@ -1,5 +1,6 @@
 FROM public.ecr.aws/docker/library/python:3.10-slim
 
+
 RUN pip install --upgrade pip
 WORKDIR /app
 COPY . /app
